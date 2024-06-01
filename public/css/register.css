@@ -2,18 +2,17 @@
     --primary: #664c25;
     --bg: #efe5d8;
     --bgc: #DEC493;
-  }
+}
 
 
-
-.login-container {
+.register-container {
     background-color: var(--bg);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
     width: 300px;
     text-align: center;
-    margin-top: 200px;
+    margin: 150px;
 }
 
 h2 {
@@ -38,7 +37,7 @@ h2 {
     border-radius: 5px;
 }
 
-.login-button {
+.register-button {
     width: 100%;
     padding: 10px;
     background-color: var(--primary);
@@ -49,7 +48,7 @@ h2 {
     font-size: 16px;
 }
 
-.login-button:hover {
+.register-button:hover {
     background-color: var(--bgc);
 }
 

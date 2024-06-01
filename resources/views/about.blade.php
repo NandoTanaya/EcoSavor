@@ -53,7 +53,7 @@
       </div>
 
       <div class="gambar_ecosavor">
-        <img src="img/Elemen what is ecosavor.png" alt="what is ecosavor" width="300" height="260">
+        <img src="img/Elemen what is ecosavor.png" alt="what is ecosavor" >
       </div>
     </section>
     <!-- 3point -->
