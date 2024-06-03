@@ -1,0 +1,101 @@
+:root {
+    --primary: #664c25;
+    --bg: #efe5d8;
+    --white: #ffffff;
+    --black: #000;
+    --bgc: #DEC493;
+    --nav: #F1CFA3;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    color: #664C25;
+  }
+
+  body {
+    font-family: "Fredoka", sans-serif;
+    background-color: var(--bg);
+    color: var(--primary);
+    min-height: 2500px;
+  }
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.4rem 3%;
+    background-color: var(--nav);
+    /* border-bottom: 1px solid var(--primary); */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99999999999999;
+    height: 75px;
+  }
+
+  .navbar .navbar-logo {
+    font-size: 2rem;
+    /* font-family: "Fredoka", Poppins; */
+    font-weight: 700;
+    color: var(--primary);
+  }
+
+  .navbar .navbar-nav a{
+    color: var(--black);
+    font-family: "Poppins", Fredoka;
+    /* kasi display inline block karena jika tidak maka navbar-nav akan turun ke bawah */
+    display: inline-block;
+    font-size: 1rem;
+    margin: 0 1rem;
+  }
+
+  .navbar .navbar-nav a:hover {
+    color: var(--primary);
+  }
+
+  .navbar .navbar-nav a:after {
+    content: '';
+    display: block;
+    padding-bottom: 0.4rem;
+    border-bottom: 0.1rem solid var(--primary);
+    transform: scaleX(0);
+    transition: 0.2s linear;
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.5);
+  }
+
+  .navbar .navbar-extra a {
+    color: var(--black);
+    margin: 0 0.4rem;
+
+  }
+
+  .navbar .navbar-extra a:hover {
+    color: var(--primary);
+  }
+
+  #buttonProfile{
+    background-color: var(--primary);
+    height: 30px;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  #buttonProfile > a{
+    color: var(--white);
+  }
+
+
