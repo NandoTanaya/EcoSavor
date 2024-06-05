@@ -102,6 +102,15 @@ body {
 .team .card-body i {
     font-size: 20px;
 }
+.sell {
+    background-color: var(--bg);
+    border-radius: 1rem;
+    margin-left: 10rem; /* Ganti #yourcolor dengan warna yang diinginkan */
+    margin-right: 10rem; /* Ganti #yourcolor dengan warna yang diinginkan */
+}
+.sell p {
+    text-decoration: underline;
+}
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     .carousel-caption {
         bottom: 370px;
@@ -114,6 +123,12 @@ body {
     }
     .img-area img {
         width: 100%;
+    }
+    .sell {
+        background-color: var(--bg);
+        /* border-radius: 1rem; */
+        margin-left: 0; /* Ganti #yourcolor dengan warna yang diinginkan */
+        margin-right: 0; /* Ganti #yourcolor dengan warna yang diinginkan */
     }
 }
 @media only screen and (max-width: 767px) {
@@ -140,5 +155,11 @@ body {
     }
     .card {
         margin-bottom: 30px;
+    }
+    .sell {
+        background-color: var(--bg);
+        /* border-radius: 1rem; */
+        margin-left: 0; /* Ganti #yourcolor dengan warna yang diinginkan */
+        margin-right: 0; /* Ganti #yourcolor dengan warna yang diinginkan */
     }
 }

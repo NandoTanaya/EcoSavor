@@ -169,7 +169,7 @@
           <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
             <div class="about-text">
               <h2>
-                Kami Menyediakan platform bagi makanan sisa yang masih berpeluang menjadi makanan enak!
+                Kami menyediakan platform bagi makanan sisa yang masih berpeluang menjadi makanan enak!
               </h2>
               <p>
                 EcoSavor merupakan website yang menyediakan berbagai macam sisa
@@ -299,6 +299,30 @@
       </div>
     </section>
     <!-- portfolio ends -->
+    {{-- Sell Section START--}}
+    <section class="sell section-padding">
+      <div class="container" style="max-width: 50rem">
+        <div class="row">
+          <div class="col-lg-4 col-md-12 col-12">
+            <div class="about-img">
+              <img src="img/Elemen Belanjna.png" alt="" class="img-fluid" />
+            </div>
+          </div>
+          <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
+            <div class="about-text">
+              <h2>
+                Ayo jual makanan yang tak terjual <span>disini!</span>
+              </h2>
+              <p>
+                Pastikan makanan sisa yang kamu jual itu masih layak untuk dimakan atau diolah kembali.
+              </p>  
+              <p><a href="#" class="btn btn-warning mt-3">Sell here</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    {{-- Sell Section END--}}
     <!-- team starts -->
     <section class="team section-padding" id="team">
       <div class="container">
