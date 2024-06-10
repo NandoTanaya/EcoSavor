@@ -51,7 +51,7 @@
                 <a class="nav-link" href="about">About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#partner">Partner</a>
+                <a class="nav-link" href="partner">Partner</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#donate">Donate</a>
@@ -176,7 +176,7 @@
                 makanan yang masih layak disantap bagi konsumen dengan harga
                 murah. Dengan membeli dan menjual sisa makanan, kita dapat
                 mengurangi sampah organik sekaligus menghemat biaya.
-              </p>  
+              </p>
             </div>
           </div>
         </div>
@@ -315,7 +315,7 @@
               </h2>
               <p>
                 Pastikan makanan sisa yang kamu jual itu masih layak untuk dimakan atau diolah kembali.
-              </p>  
+              </p>
               <p><a href="#" class="btn btn-warning mt-3">Sell here</a></p>
             </div>
           </div>

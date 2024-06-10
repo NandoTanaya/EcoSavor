@@ -11,6 +11,7 @@
     <title>@yield('title', 'Custom Laravel')</title>
     <link href="{{ asset('css/login.css') }}" rel="stylesheet">
     <link href="{{ asset('css/register.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/partner.css')}}" rel="stylesheet">
 
     <style>
         :root {
@@ -94,7 +95,7 @@
                   <a class="nav-link" href="about">About</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#partner">Partner</a>
+                  <a class="nav-link" href="partner">Partner</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#donate">Donate</a>

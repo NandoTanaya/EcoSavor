@@ -1,0 +1,12 @@
+:root {
+    --primary: #664c25;
+    --bg: #efe5d8;
+    --bgc: #DEC493;
+  }
+    body{
+        background-color: var(--bgc);
+    }
+
+    .img-why{
+        height: 200px;
+    }
