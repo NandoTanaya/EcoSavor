@@ -104,13 +104,29 @@ body {
 }
 .sell {
     background-color: var(--bg);
+    margin-top: -5rem;
     border-radius: 1rem;
-    margin-left: 10rem; /* Ganti #yourcolor dengan warna yang diinginkan */
-    margin-right: 10rem; /* Ganti #yourcolor dengan warna yang diinginkan */
+    margin-left: 10rem;
+    margin-right: 10rem;
+    box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.15);
 }
 .sell p {
     text-decoration: underline;
 }
+.donate-word {
+    margin-top: 5rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+}
+.donate {
+    margin-top: -5rem;
+    background-color: #ffe0b1;
+    border-radius: 1rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+    box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.15);
+}
+
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     .carousel-caption {
         bottom: 370px;
@@ -126,9 +142,17 @@ body {
     }
     .sell {
         background-color: var(--bg);
-        /* border-radius: 1rem; */
-        margin-left: 0; /* Ganti #yourcolor dengan warna yang diinginkan */
-        margin-right: 0; /* Ganti #yourcolor dengan warna yang diinginkan */
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .donate {
+        background-color: #ffe0b1;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .donate-word {
+        margin-left: 0;
+        margin-right: 0;
     }
 }
 @media only screen and (max-width: 767px) {
@@ -158,8 +182,16 @@ body {
     }
     .sell {
         background-color: var(--bg);
-        /* border-radius: 1rem; */
-        margin-left: 0; /* Ganti #yourcolor dengan warna yang diinginkan */
-        margin-right: 0; /* Ganti #yourcolor dengan warna yang diinginkan */
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .donate {
+        background-color: #ffe0b1;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .donate-word {
+        margin-left: 0;
+        margin-right: 0;
     }
 }

@@ -72,49 +72,49 @@
   <body>
     {{-- Navbar start --}}
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <div class="container">
-          <a class="navbar-brand" href="about">EcoSavor</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link" href="home">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="about">About</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="partner">Partner</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#donate">Donate</a>
-                </li>
-                {{-- <li class="nav-item">
-                  <a class="nav-link" href="#buy">Buy</a>
-                </li> --}}
-                {{-- <li class="nav-item">
-                  <a class="nav-link" href="#sell">Sell</a>
-                </li> --}}
+      <div class="container">
+        <a class="navbar-brand" href="about">EcoSavor</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" href="register"><i data-feather="log-in"></i></a>
+                <a class="nav-link" href="buy">Beranda</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="profile"><i data-feather="user"></i></a>
+                <a class="nav-link" href="about">Tentang Kami</a>
               </li>
-            </ul>
-          </div>
+              <li class="nav-item">
+                <a class="nav-link" href="partner">Partner</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="donate">Donasi</a>
+              </li>
+              {{-- <li class="nav-item">
+                <a class="nav-link" href="#buy">Buy</a>
+              </li> --}}
+              {{-- <li class="nav-item">
+                <a class="nav-link" href="#sell">Sell</a>
+              </li> --}}
+            <li class="nav-item">
+              <a class="nav-link" href="register"><i data-feather="log-in"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="profile"><i data-feather="user"></i></a>
+            </li>
+          </ul>
         </div>
-      </nav>
+      </div>
+    </nav>
     {{-- Navbar END --}}
     
     

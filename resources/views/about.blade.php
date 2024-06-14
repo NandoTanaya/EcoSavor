@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
+    <title>About</title>
 
     <!-- All CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet" />
@@ -45,16 +45,16 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" href="home">Home</a>
+                <a class="nav-link" href="buy">Beranda</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="about">About</a>
+                <a class="nav-link" href="about">Tentang Kami</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="partner">Partner</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#donate">Donate</a>
+                <a class="nav-link" href="donate">Donasi</a>
               </li>
               {{-- <li class="nav-item">
                 <a class="nav-link" href="#buy">Buy</a>
@@ -109,31 +109,31 @@
         <div class="carousel-item active">
           <img src="img/carousel4.jpg" class="d-block w-100" alt="..." />
           <div class="carousel-caption">
-            <h5>Donate</h5>
+            <h5>Donasi</h5>
             <p>
-              Donate your ugly food or participate in ugly food donation for
-              people here
+              Donasikan makanan Anda atau berpartisipasi dalam donasi makanan sisa untuk
+              orang-orang di sini
             </p>
-            <p><a href="#" class="btn btn-warning mt-3">Donate here</a></p>
+            <p><a href="donate" class="btn btn-warning mt-3">Donasi disini</a></p>
           </div>
         </div>
         <div class="carousel-item">
           <img src="img/carousel2.jpg" class="d-block w-100" alt="..." />
           <div class="carousel-caption">
-            <h5>Buy</h5>
+            <h5>Beli</h5>
             <p>
-              Buy ugly foods around your area with lower price and good quality
-              here
+              Belilah makanan sisa di sekitar daerah Anda dengan harga lebih murah dan kualitas bagus
+              Di Sini
             </p>
-            <p><a href="#" class="btn btn-warning mt-3">Buy here</a></p>
+            <p><a href="home" class="btn btn-warning mt-3">Beli disini</a></p>
           </div>
         </div>
         <div class="carousel-item">
           <img src="img/carousel3.jpg" class="d-block w-100" alt="..." />
           <div class="carousel-caption">
-            <h5>Sell</h5>
-            <p>Sell your good condition ugly food here</p>
-            <p><a href="#" class="btn btn-warning mt-3">Sell here</a></p>
+            <h5>Jual</h5>
+            <p>Jual makanan sisa dengan kondisi bagus Anda di sini</p>
+            <p><a href="partner" class="btn btn-warning mt-3">Jual disini</a></p>
           </div>
         </div>
       </div>
@@ -158,7 +158,7 @@
     </div>
 
     <!-- about section starts -->
-    <section id="about" class="about section-padding">
+    <section class="about section-padding">
       <div class="container">
         <div class="row">
           <div class="col-lg-4 col-md-12 col-12">
@@ -169,13 +169,13 @@
           <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
             <div class="about-text">
               <h2>
-                Kami menyediakan platform bagi makanan sisa yang masih berpeluang menjadi makanan enak!
+                Ecosavor itu apa sih?
               </h2>
               <p>
                 EcoSavor merupakan website yang menyediakan berbagai macam sisa
                 makanan yang masih layak disantap bagi konsumen dengan harga
                 murah. Dengan membeli dan menjual sisa makanan, kita dapat
-                mengurangi sampah organik sekaligus menghemat biaya.
+                mengurangi sampah organik sekaligus menghemat biaya pengeluaran.
               </p>
             </div>
           </div>
@@ -261,7 +261,7 @@
                 <p class="lead">
                   23-48 juta ton/tahun makanan terbuang sia-sia di Indonesia
                 </p>
-                <button class="btn bg-warning text-dark">Learn More</button>
+                {{-- <button class="btn bg-warning text-dark">Learn More</button> --}}
               </div>
             </div>
           </div>
@@ -276,7 +276,7 @@
                   Kerugian ekonomi sebesar Rp 213-551 triliun/thn, setara 4-5%
                   PDB Indonesia/thn
                 </p>
-                <button class="btn bg-warning text-dark">learn More</button>
+                {{-- <button class="btn bg-warning text-dark">learn More</button> --}}
               </div>
             </div>
           </div>
@@ -291,7 +291,7 @@
                   Makanan terbuang setara dengan porsi makan 61-125 juta
                   orang/tahun
                 </p>
-                <button class="btn bg-warning text-dark">Learn More</button>
+                {{-- <button class="btn bg-warning text-dark">Learn More</button> --}}
               </div>
             </div>
           </div>
@@ -299,6 +299,20 @@
       </div>
     </section>
     <!-- portfolio ends -->
+    {{-- Sell word start --}}
+    <section id="portfolio" class="sell-word section-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-header text-center pb-5">
+              <h2>Tertarik untuk menjual makanan berlebih di EcoSavor? </h2>
+              <p>Jadi partner kami dan raih keuntungan dari makanan yang berpotensi terbuang.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    {{-- Sell word end --}}
     {{-- Sell Section START--}}
     <section class="sell section-padding">
       <div class="container" style="max-width: 50rem">
@@ -311,18 +325,57 @@
           <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
             <div class="about-text">
               <h2>
-                Ayo jual makanan yang tak terjual <span>disini!</span>
+                Klik dan jadi partner kami <span>disini!</span>
               </h2>
               <p>
-                Pastikan makanan sisa yang kamu jual itu masih layak untuk dimakan atau diolah kembali.
+                Pastikan makanan yang anda jual masih layak makan.
               </p>
-              <p><a href="#" class="btn btn-warning mt-3">Sell here</a></p>
+              <p><a href="partner" class="btn btn-warning mt-3">Sell here</a></p>
             </div>
           </div>
         </div>
       </div>
     </section>
     {{-- Sell Section END--}}
+    {{-- Donation word start --}}
+    <section id="portfolio" class="donate-word section-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-header text-center pb-5">
+              <h2>Dilengkapi dengan fitur donasi</h2>
+              <p>Apabila anda sedang tidak ingin makan tetapi ingin
+                memberi kepada yang membutuhkan dan berpartisipasi dalam menjaga lingkungan.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    {{-- Donation word end --}}
+    {{-- Donate start --}}
+    <section class="donate section-padding">
+      <div class="container" style="max-width: 50rem">
+        <div class="row">
+          <div class="col-lg-4 col-md-12 col-12">
+            <div class="donate-img">
+              <img src="img/Elemen Donasi.png" alt="" class="img-fluid" />
+            </div>
+          </div>
+          <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
+            <div class="about-text">
+              <h2>
+                Bantu meminimalisir pembuangan makanan lebih mudah
+              </h2>
+              {{-- <p>
+                Pastikan makanan yang anda jual masih layak makan.
+              </p> --}}
+              <p><a href="donate" class="btn btn-warning mt-3">Donate disini</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    {{-- Donate end --}}
     <!-- team starts -->
     <section class="team section-padding" id="team">
       <div class="container">
@@ -411,63 +464,6 @@
       </div>
     </section>
     <!-- team ends -->
-    <!-- Contact starts -->
-    <section id="contact" class="contact section-padding">
-      <div class="container mt-5 mb-5">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="section-header text-center pb-5">
-              <h2>Hubungi kami</h2>
-            </div>
-          </div>
-        </div>
-        <div class="row m-0">
-          <div class="col-md-12 p-0 pt-4 pb-4">
-            <form action="#" class="bg-light p-4 m-auto">
-              <div class="row">
-                <div class="col-md-12">
-                  <div class="mb-3">
-                    <input
-                      class="form-control"
-                      placeholder="Full Name"
-                      required=""
-                      type="text"
-                    />
-                  </div>
-                </div>
-                <div class="col-md-12">
-                  <div class="mb-3">
-                    <input
-                      class="form-control"
-                      placeholder="Email"
-                      required=""
-                      type="email"
-                    />
-                  </div>
-                </div>
-                <div class="col-md-12">
-                  <div class="mb-3">
-                    <textarea
-                      class="form-control"
-                      placeholder="Message"
-                      required=""
-                      rows="3"
-                    ></textarea>
-                  </div>
-                </div>
-                <button
-                  class="btn btn-warning btn-lg btn-block mt-3"
-                  type="button"
-                >
-                  Send Now
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- contact ends -->
     <!-- footer starts -->
     <footer class="bg-dark p-2 text-center">
       <div class="container">
@@ -480,7 +476,7 @@
     <script>
       feather.replace();
     </script>
-    <!-- All Js -->
+    <!-- All Js --> 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
