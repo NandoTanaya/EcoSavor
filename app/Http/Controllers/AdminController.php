@@ -31,6 +31,12 @@ class AdminController extends Controller
 
         $category->save();
 
+        /**
+         * Tambah buat notif toastr kalau berhasil add category
+         */
+        toastr()->timeOut(10000)->closeButton()->addSuccess('
+        Category Added Successfully');
+
         return redirect()->back();
     }
 }
