@@ -9,6 +9,11 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 
 /**
+ * Atur route untuk controller admin ke category
+ */
+use App\Http\Controllers\AdminController;
+
+/**
  * Ubah route ke home (habis ditambah template HTML)
  */
 route::get('/', [HomeController::class, 'home']);
@@ -29,3 +34,12 @@ require __DIR__.'/auth.php';
  * Atur route awal admin, ada tambahan untuk auth middleware
  */
 route::get('admin/dashboard', [HomeController::class, 'index'])->middleware(['auth', 'admin']);
+
+/**
+ * Atur route untuk controller admin ke category
+ */
+route::get('view_category', [AdminController::class, 'view_category'])->middleware(['auth', 'admin']);
+/**
+ * Atur route untuk add category
+ */
+route::post('add_category', [AdminController::class, 'add_category'])->middleware(['auth', 'admin']);
