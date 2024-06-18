@@ -178,13 +178,9 @@ class AdminController extends Controller
             unlink($image_path);
         }
 
-        if($image)
-        {
+        if ($image && $image instanceof \Illuminate\Http\UploadedFile) {
             $imagename = time().'.'.$image->getClientOriginalExtension();
-            /**
-             * Masuk ke folder products di public
-             */
-            $request->image->move('products', $imagename);
+            $image->move('products', $imagename);
             $data->image = $imagename;
         }
 
