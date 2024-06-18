@@ -9,6 +9,11 @@ use Illuminate\Http\Request;
  */
 use App\Models\Category;
 
+/**
+ * Untuk add product
+ */
+use App\Models\Product;
+
 class AdminController extends Controller
 {
     public function view_category()
@@ -73,5 +78,46 @@ class AdminController extends Controller
         Category Updated Successfully');
 
         return redirect('/view_category');
+    }
+
+    public function add_product()
+    {
+        $category = Category::all();
+
+        return view('admin.add_product', compact('category'));
+    }
+
+    public function upload_product(Request $request)
+    {
+        $data = new Product;
+
+        $data->title = $request->title;
+        $data->description = $request->description;
+        $data->starting_price = $request->s_price;
+        $data->discount = $request->disc;
+
+        $data->final_price = $request->f_price;
+
+        $data->quantity = $request->qty;
+        $data->category = $request->category;
+
+        $image = $request->image;
+
+        if($image)
+        {
+            $imagename = time().'.'.$image->getClientOriginalExtension();
+            /**
+             * Masuk ke folder products di public
+             */
+            $request->image->move('products', $imagename);
+            $data->image = $imagename;
+        }
+
+        /* Pesan sukses */
+        toastr()->timeOut(10000)->closeButton()->addSuccess('
+        Product Added Successfully');
+
+        $data->save();
+        return redirect()->back();
     }
 }
