@@ -60,7 +60,7 @@
                 <h1>Add Product</h1>
 
                 <div class="div_deg">
-                    <form action="{{url('upload_product')}}" method="Post" enctype="multipart/form-data">
+                    <form id="productForm" action="{{url('upload_product')}}" method="Post" enctype="multipart/form-data">
                         @csrf
                         <div class="input_deg">
                             <label>Product Title</label>
@@ -74,7 +74,7 @@
 
                         <div class="input_deg">
                             <label>Starting Price</label>
-                            <input type="text" name="s_price" id="s_price" required>
+                            <input type="number" name="s_price" id="s_price" required>
                         </div>
 
                         <div class="input_deg">
@@ -84,13 +84,8 @@
 
                         <div class="input_deg">
                             <label>Final Price</label>
-                            <input type="text" id="f_price"  readonly>
-                            <input type="hidden" name="f_price" id="hidden_f_price">
-                        </div>
-
-                        <div class="input_deg">
-                            <label>&nbsp;</label>
-                            <button type="button" onclick="calculateDiscount()">Calculate Final Price</button>
+                            <input type="number" id="f_price" readonly>
+                            <input type="hidden" name="f_price" id="hidden_f_price" required>
                         </div>
 
                         <div class="input_deg">
@@ -105,8 +100,8 @@
 
                         <div class="input_deg">
                             <label>Product Category</label>
-                            <select name="category" required>
-                                <option>Select a option</option>
+                            <select name="category" id="category" required>
+                                <option value="">Select an option</option>
                                 @foreach ($category as $category)
                                     <option value="{{$category->category_name}}">{{$category->category_name}}</option>
                                 @endforeach
@@ -137,10 +132,10 @@
             var discount = document.getElementById('disc').value;
             var errorMessage = document.getElementById('error_message');
 
-            if (discount < 50) {
-                errorMessage.textContent = "Discount should be at least 50.";
+            if (discount < 50 || discount>100) {
+                errorMessage.textContent = "Discount should be at least 50 and max 100.";
                 document.getElementById('f_price').value = "";
-                documen.getElementById('hidden_f_price').value = "";
+                document.getElementById('hidden_f_price').value = "";
             } else {
                 errorMessage.textContent = "";
                 if (startingPrice && discount) {
@@ -150,6 +145,23 @@
                 }
             }
         }
+
+        document.getElementById('s_price').addEventListener('input', calculateDiscount);
+        document.getElementById('disc').addEventListener('input', calculateDiscount);
+
+        document.getElementById('productForm').addEventListener('submit', function(event) {
+            var fPrice = document.getElementById('f_price').value;
+            var category = document.getElementById('category').value;
+            var errorMessage = document.getElementById('error_message');
+
+            if (!fPrice) {
+                errorMessage.textContent = "Please provide a valid final price.";
+                event.preventDefault(); // Prevent form submission
+            } else if (category === "") {
+                errorMessage.textContent = "Please select a valid category.";
+                event.preventDefault(); // Prevent form submission
+            }
+        });
     </script>
     <script src="{{asset('admincss/vendor/popper.js/umd/popper.min.js')}}"> </script>
     <script src="{{asset('admincss/vendor/jquery/jquery.min.js')}}"></script>
