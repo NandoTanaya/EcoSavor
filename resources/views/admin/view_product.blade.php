@@ -47,6 +47,13 @@
             object-fit: cover; /* Memastikan gambar dipotong dan diposisikan sesuai dengan aspek rasio */
         }
 
+        /* Search */
+        input[type="search"]
+        {
+            width: 500px;
+            height: 60px;
+            margin-left: 50px;
+        }
 
     </style>
 
@@ -63,6 +70,14 @@
         <div class="page-header">
           <div class="container-fluid">
 
+            <!-- Fitur search -->
+            <form action="{{url('product_search')}}" method="get">
+            @csrf
+                <input type="search" name="search">
+                <input type="submit" class="btn btn-secondary" value="Search">
+            </form>
+
+            <!-- -->
             <div class="div_deg">
                 <table class="table_deg">
                     <tr>
@@ -75,6 +90,7 @@
                         <th>Final Price</th>
                         <th>Image</th>
                         <th>Delete</th>
+                        <th>Edit</th>
                     </tr>
 
                     @foreach ($product as $products)
@@ -100,6 +116,10 @@
                             onclick="confirmation(event)" href="{{url('delete_product', $products->id)}}">Delete</a>
                         </td>
 
+                        <td>
+                            <a class="btn btn-success"
+                            href="{{url('edit_product', $products->id)}}">Edit</a>
+                        </td>
                     </tr>
 
                     @endforeach
