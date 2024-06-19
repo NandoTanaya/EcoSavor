@@ -28,8 +28,8 @@
             </button>
             <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
                 <div class="navbar-nav mx-auto">
-                    <a href="index.html" class="nav-item nav-link active">Home</a>
-                    <a href="{{url('/buy')}}" class="nav-item nav-link">Buy</a>
+                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="shop.html" class="nav-item nav-link active">Buy</a>
                     <a href="shop-detail.html" class="nav-item nav-link">Shop Detail</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
@@ -48,7 +48,7 @@
                         <i class="fa fa-shopping-bag fa-2x"></i>
                         <span class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-dark px-1" style="top: -5px; left: 15px; height: 20px; min-width: 20px;">3</span>
                     </a>
-                    <a href="{{url('/login')}}" class="my-auto">
+                    <a href="#" class="my-auto">
                         <i class="fas fa-user fa-2x"></i>
                     </a>
                 </div>

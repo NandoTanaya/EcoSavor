@@ -13,6 +13,9 @@ use App\Http\Controllers\HomeController;
  */
 use App\Http\Controllers\AdminController;
 
+/** Untuk BuyController */
+use App\Http\Controllers\BuyController;
+
 /**
  * Ubah route ke home (habis ditambah template HTML)
  */
@@ -66,3 +69,10 @@ route::get('edit_product/{id}', [AdminController::class, 'edit_product'])->middl
 route::post('update_product/{id}', [AdminController::class, 'update_product'])->middleware(['auth', 'admin']);
 
 route::get('product_search', [AdminController::class, 'product_search'])->middleware(['auth', 'admin']);
+
+/**
+ * Buy
+ */
+route::get('/buy', [BuyController::class, 'buy']);
+route::get('category_search', [BuyController::class, 'category_search']);
+route::get('shop_search', [BuyController::class, 'shop_search']);
