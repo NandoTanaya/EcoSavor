@@ -10,10 +10,10 @@
             <li>
                 <div class="d-flex justify-content-between fruite-name">
                     <!-- Tautan untuk melakukan pencarian berdasarkan kategori -->
-                    <a href="{{ url('/category_search?category=' . urlencode($category->category_name)) }}">
-                        <i class="fas fa-apple-alt me-2"></i>{{ $category->category_name }}
+                    <a href="{{ url('/category_search?category=' . urlencode($category->category_name)) }}" style="color: #664C25!important">
+                        <i class="fas fa-apple-alt me-2" style="color: #664C25!important"></i>{{ $category->category_name }}
                     </a>
-                    <span>({{ $productCount }})</span>
+                    <span style="color: #664C25!important">({{ $productCount }})</span>
                 </div>
             </li>
             @endforeach

@@ -43,8 +43,8 @@
                             @endif
                             <p class="text-dark fs-5 fw-bold mb-0">Rp{{number_format($products->final_price, 0, ',', '.')}}</p>
                         </div>
-                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary d-flex align-items-center">
-                            <i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart
+                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary d-flex align-items-center" style="color: #664C25!important">
+                            <i class="fa fa-shopping-bag me-2 text-primary" style="color: #664C25!important"></i> Add to cart
                         </a>
                     </div>
                 </div>
