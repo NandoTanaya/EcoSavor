@@ -40,6 +40,7 @@
             <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars text-primary"></span>
             </button>
+
             <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
                 <div class="navbar-nav mx-auto">
                     <a href="{{url('/')}}" class="nav-item nav-link {{set_active('/')}}">Beranda</a>
@@ -47,21 +48,41 @@
                     <a href="shop-detail.html" class="nav-item nav-link" >Partner</a>
                     <a href="contact.html" class="nav-item nav-link" >Donasi</a>
                 </div>
+            
+                @if (Route::has('login'))
                 <div class="d-flex m-3 me-0">
                     <a href="#" class="position-relative me-4 my-auto">
                         <i class="fa fa-shopping-bag fa-2x"></i>
                         <span class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-dark px-1" style="top: -5px; left: 15px; height: 20px; min-width: 20px;">3</span>
                     </a>
-
+                    
+                    @auth
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link " data-bs-toggle="dropdown" style="color: var(--primary)!important"><i class="fas fa-user fa-2x" style="color: var(--primary)!important"></i></a>
-                        <!--dropdown-toggle
-                        <div class="dropdown-menu m-0 bg-secondary rounded-0" >
-                            <a href="cart.html" class="dropdown-item">Profile</a>
-                            <a href="chackout.html" class="dropdown-item">LogOut</a>
-                        </div> -->
+                        <a href="#" class="nav-link " data-bs-toggle="dropdown" style="color: var(--primary)!important">
+                            
+                            <div i class="bi bi-chevron-down">
+                                {{ Auth::user()->name }}
+                            </div>
+                            
+                            <div class="dropdown-menu m-0 bg-white rounded-0" >
+                                <a href="{{route('profile.edit')}}" class="dropdown-item">Profile</a>
+                                <form method="POST" action="{{ route('logout') }}">
+                                    @csrf
+                                    <button type="submit" class="dropdown-item">Log Out</button>
+                                </form>
+                                {{-- <a href="{{route('logout')}}" class="dropdown-item">LogOut</a> --}}
+                            </div>
+                        </a>
                     </div>
+
+                    @else
+                    <a href="{{ url('/login') }}" class="position-relative me-4 my-auto">
+                        <i class="bi bi-box-arrow-in-left fa-2x"></i>
+                    </a>
+                    @endauth
+                    
                 </div>
+                @endif
             </div>
         </nav>
 
