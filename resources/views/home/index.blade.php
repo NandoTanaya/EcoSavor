@@ -6,9 +6,8 @@
     </head>
 
     <body>
-
         <!-- Spinner and Navbar start -->
-        @include('home.navbar')
+        @include('master.navbar')
         <!-- Spinner and Navbar end -->
 
 
@@ -63,8 +62,10 @@
 
 
         <!-- Footer Start -->
-        @include('home.footer')
+        @include('./master.footer')
         <!-- Footer End -->
+
+
 
 
     </body>

@@ -1,6 +1,6 @@
 <div class="col-lg-12">
     <div class="mb-3">
-        <h4>Categories</h4>
+        <h4>Kategori</h4>
         <ul class="list-unstyled fruite-categorie">
             @foreach ($category as $category)
             @php

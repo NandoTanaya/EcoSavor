@@ -43,11 +43,15 @@
                             @endif
                             <p class="text-dark fs-5 fw-bold mb-0">Rp{{number_format($products->final_price, 0, ',', '.')}}</p>
                         </div>
-                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary d-flex align-items-center" style="color: #664C25!important">
-                            <i class="fa fa-shopping-bag me-2 text-primary" style="color: #664C25!important"></i> Add to cart
-                        </a>
+                        <div>
+                            <p class="mb-0 text-danger mb-0" style="text-align: center!important">Sisa: {{$products->quantity}}</p>
+                            <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary d-flex align-items-center mt-2" style="color: #664C25!important">
+                                <i class="fa fa-shopping-bag me-2 text-primary" style="color: #664C25!important"></i> Add to cart
+                            </a>
+                        </div>
                     </div>
                 </div>
+
             </div>
         </div>
 

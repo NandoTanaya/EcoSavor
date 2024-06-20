@@ -1,0 +1,72 @@
+<style>
+    :root {
+      --primary: #664c25;
+      --bg: #efe5d8;
+      --bgc: #DEC493;
+      }
+
+      .active
+      {
+        font-weight: bold!important;
+      }
+</style>
+
+<!-- Spinner Start -->
+<div id="spinner" class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50  d-flex align-items-center justify-content-center">
+    <div class="spinner-grow text-primary" role="status"></div>
+</div>
+<!-- Spinner End -->
+
+
+
+<!-- Navbar start -->
+<div class="container-fluid fixed-top">
+    <div class="container topbar bg-primary d-none d-lg-block" style="background-color: var(--primary)!important">
+        <div class="d-flex justify-content-between" >
+            <div class="top-info ps-2">
+                <small class="me-3"><i class="fas fa-map-marker-alt me-2 text-secondary"></i> <a href="#" class="text-white">Jl. Avalon No 9, Jakarta Barat 11530</a></small>
+                <small class="me-3"><i class="fas fa-envelope me-2 text-secondary"></i><a href="#" class="text-white">avalonsofteng@gmail.com</a></small>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="container px-0">
+
+        <!-- Ubah navbar -->
+        <nav class="navbar navbar-light bg-white navbar-expand-xl">
+            <a href="{{url('/')}}" class="navbar-brand"><h1 class="text-primary display-6" style="color: var(--primary)!important">Ecosavor</h1></a>
+            <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars text-primary"></span>
+            </button>
+            <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
+                <div class="navbar-nav mx-auto">
+                    <a href="{{url('/')}}" class="nav-item nav-link {{set_active('/')}}">Beranda</a>
+                    <a href="{{url('/buy')}}" class="nav-item nav-link {{set_active('/buy')}}">Beli</a>
+                    <a href="shop-detail.html" class="nav-item nav-link" >Partner</a>
+                    <a href="contact.html" class="nav-item nav-link" >Donasi</a>
+                </div>
+                <div class="d-flex m-3 me-0">
+                    <a href="#" class="position-relative me-4 my-auto">
+                        <i class="fa fa-shopping-bag fa-2x"></i>
+                        <span class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-dark px-1" style="top: -5px; left: 15px; height: 20px; min-width: 20px;">3</span>
+                    </a>
+
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link " data-bs-toggle="dropdown" style="color: var(--primary)!important"><i class="fas fa-user fa-2x" style="color: var(--primary)!important"></i></a>
+                        <!--dropdown-toggle
+                        <div class="dropdown-menu m-0 bg-secondary rounded-0" >
+                            <a href="cart.html" class="dropdown-item">Profile</a>
+                            <a href="chackout.html" class="dropdown-item">LogOut</a>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+    </div>
+
+
+</div>
+<!-- Navbar End -->

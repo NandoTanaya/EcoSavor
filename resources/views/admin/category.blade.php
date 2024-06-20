@@ -57,7 +57,7 @@
       <div class="page-content">
         <div class="page-header">
           <div class="container-fluid">
-            <h1 style="color: white">Add Category</h1>
+            <h1 style="color: white">Tambah Kategori</h1>
             <!-- Body start -->
             <div class="div_deg">
 
@@ -73,9 +73,9 @@
             <div>
                 <table class="table_deg">
                     <tr>
-                        <th>Category Name</th>
+                        <th>Kategori</th>
                         <th>Edit</th>
-                        <th>Delete</th>
+                        <th>Hapus</th>
                     </tr>
 
                     @foreach ($data as $data)
@@ -90,7 +90,7 @@
 
                         <td>
                             <a class="btn btn-danger" onclick="confirmation(event)"
-                            href="{{url('delete_category', $data->id)}}">Delete</a>
+                            href="{{url('delete_category', $data->id)}}">Hapus</a>
                         </td>
                     </tr>
 

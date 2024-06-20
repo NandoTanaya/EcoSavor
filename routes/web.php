@@ -19,7 +19,7 @@ use App\Http\Controllers\BuyController;
 /**
  * Ubah route ke home (habis ditambah template HTML)
  */
-route::get('/', [HomeController::class, 'home']);
+route::get('/', [HomeController::class, 'home'])->name('/');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -41,38 +41,42 @@ route::get('admin/dashboard', [HomeController::class, 'index'])->middleware(['au
 /**
  * Atur route untuk controller admin ke category
  */
-route::get('view_category', [AdminController::class, 'view_category'])->middleware(['auth', 'admin']);
+route::get('view_category', [AdminController::class, 'view_category'])->middleware(['auth', 'admin'])->name('view_category');
 /**
  * Atur route untuk add category
  */
-route::post('add_category', [AdminController::class, 'add_category'])->middleware(['auth', 'admin']);
+route::post('add_category', [AdminController::class, 'add_category'])->middleware(['auth', 'admin'])->name('view_category');
 
 /**
  * Atur route untuk delete category
  */
-route::get('delete_category/{id}', [AdminController::class, 'delete_category'])->middleware(['auth', 'admin']);
+route::get('delete_category/{id}', [AdminController::class, 'delete_category'])->middleware(['auth', 'admin'])->name('view_category');
 
 /**
  * Atur route untuk edit category
  */
-route::get('edit_category/{id}', [AdminController::class, 'edit_category'])->middleware(['auth', 'admin']);
-route::post('update_category/{id}', [AdminController::class, 'update_category'])->middleware(['auth', 'admin']);
+route::get('edit_category/{id}', [AdminController::class, 'edit_category'])->middleware(['auth', 'admin'])->name('view_category');
+route::post('update_category/{id}', [AdminController::class, 'update_category'])->middleware(['auth', 'admin'])->name('view_category');
 
 /**
  * Atur route untuk add_product
  */
-route::get('add_product', [AdminController::class, 'add_product'])->middleware(['auth', 'admin']);
-route::post('upload_product', [AdminController::class, 'upload_product'])->middleware(['auth', 'admin']);
-route::get('view_product', [AdminController::class, 'view_product'])->middleware(['auth', 'admin']);
-route::get('delete_product/{id}', [AdminController::class, 'delete_product'])->middleware(['auth', 'admin']);
-route::get('edit_product/{id}', [AdminController::class, 'edit_product'])->middleware(['auth', 'admin']);
-route::post('update_product/{id}', [AdminController::class, 'update_product'])->middleware(['auth', 'admin']);
+route::get('add_product', [AdminController::class, 'add_product'])->middleware(['auth', 'admin'])->name('view_product');
+route::post('upload_product', [AdminController::class, 'upload_product'])->middleware(['auth', 'admin'])->name('view_product');
+route::get('view_product', [AdminController::class, 'view_product'])->middleware(['auth', 'admin'])->name('view_product');
+route::get('delete_product/{id}', [AdminController::class, 'delete_product'])->middleware(['auth', 'admin'])->name('view_product');
+route::get('edit_product/{id}', [AdminController::class, 'edit_product'])->middleware(['auth', 'admin'])->name('view_product');
+route::post('update_product/{id}', [AdminController::class, 'update_product'])->middleware(['auth', 'admin'])->name('view_product');
 
-route::get('product_search', [AdminController::class, 'product_search'])->middleware(['auth', 'admin']);
+route::get('product_search', [AdminController::class, 'product_search'])->middleware(['auth', 'admin'])->name('view_product');
 
 /**
  * Buy
  */
-route::get('/buy', [BuyController::class, 'buy']);
+route::get('/buy', [BuyController::class, 'buy'])->name('/buy');
 route::get('category_search', [BuyController::class, 'category_search']);
 route::get('shop_search', [BuyController::class, 'shop_search']);
+
+/**
+ * logout
+ */

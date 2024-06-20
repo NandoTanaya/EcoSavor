@@ -1,7 +1,7 @@
 <!-- Shop Start-->
 <div class="container-fluid fruite py-5">
     <div class="container py-5">
-        <h1 class="mb-4">Product</h1>
+        <h1 class="mb-4">Produk</h1>
         <div class="row g-4">
             <div class="col-lg-12">
                 <div class="row g-4">
