@@ -45,7 +45,7 @@
                         </div>
                         <div>
                             <p class="mb-0 text-danger mb-0" style="text-align: center!important">Sisa: {{$products->quantity}}</p>
-                            <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary d-flex align-items-center mt-2" style="color: #664C25!important">
+                            <a href="{{url('add_cart',$products->id)}}" class="btn border border-secondary rounded-pill px-3 text-primary d-flex align-items-center mt-2" style="color: #664C25!important">
                                 <i class="fa fa-shopping-bag me-2 text-primary" style="color: #664C25!important"></i> Add to cart
                             </a>
                         </div>

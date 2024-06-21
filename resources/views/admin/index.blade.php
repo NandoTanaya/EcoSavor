@@ -14,9 +14,9 @@
       <div class="page-content">
         <div class="page-header">
           <div class="container-fluid">
-            <!-- Body til footer here -->
+            <!-- Body here -->
             @include('admin.body')
-
+            @include('admin.footer')
           </div>
       </div>
     </div>

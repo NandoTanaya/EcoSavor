@@ -39,7 +39,7 @@ require __DIR__.'/auth.php';
 /**
  * Atur route awal admin, ada tambahan untuk auth middleware
  */
-route::get('admin/dashboard', [HomeController::class, 'index'])->middleware(['auth', 'admin']);
+route::get('admin/dashboard', [HomeController::class, 'index'])->middleware(['auth', 'admin'])->name('admin/dashboard');
 
 /**
  * Atur route untuk controller admin ke category
@@ -89,3 +89,18 @@ route::get('shop_search', [BuyController::class, 'shop_search']);
  * Partner
  */
 route::get('/partner', [PartnerController::class, 'partner'])->name('/partner');
+
+
+/** Cart */
+// add cart
+route::get('add_cart/{id}',[HomeController::class,'add_cart'])->middleware(['auth', 'verified']);
+
+// mycart
+route::get('mycart',[HomeController::class,'mycart'])->middleware(['auth', 'verified']);
+
+// remove pada cart
+Route::get('/delete_cart/{id}', [HomeController::class, 'deleteCart'])->name('delete_cart');
+
+Route::get('/donasi', function () {
+    return view('home.donasi');
+})->middleware(['auth', 'verified'])->name('donasi');

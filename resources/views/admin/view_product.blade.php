@@ -134,6 +134,7 @@
                         {{$product->onEachSide(1)->links()}}
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
@@ -167,3 +168,5 @@
     <script src="{{asset('admincss/js/front.js')}}"></script>
 </body>
 </html>
+
+@include('admin.footer')

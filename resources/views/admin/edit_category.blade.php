@@ -58,3 +58,5 @@
     <script src="{{asset('admincss/js/front.js')}}"></script>
   </body>
 </html>
+
+@include('admin.footer')

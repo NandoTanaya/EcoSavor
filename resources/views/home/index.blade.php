@@ -11,58 +11,34 @@
         <!-- Spinner and Navbar end -->
 
 
-        <!-- Modal Search Start -->
-        @include('home.search')
-        <!-- Modal Search End -->
-
-
         <!-- Hero Start -->
         @include('home.header')
         <!-- Hero End -->
 
+        <!-- Motto n fitur Start -->
+        @include('home.fitur')
+        <!-- Motto n fitur End -->
 
-        <!-- Featurs Section Start -->
-        @include('home.feature')
-        <!-- Featurs Section End -->
+        <!-- Portfolio -->
+        @include('home.portofolio')
 
-
-        <!-- Shop Start-->
-        @include('home.shop')
-        <!-- Shop End-->
-
-
-        <!-- Ad Start -->
-        @include('home.ad')
-        <!-- Ad End -->
-
-
-        <!-- Another Shop Start-->
-        @include('home.anothershop')
-        <!-- Another Shop End -->
-
-
-        <!-- Banner Section Start-->
+    </br></br></br></br>
+        <!-- Banner -->
         @include('home.banner')
-        <!-- Banner Section End -->
 
 
-        <!-- Bestseller Product Start -->
-        @include('home.bestseller')
-        <!-- Bestseller Product End -->
+        <!-- Info Donate Start -->
+        @include('home.info')
+        <!-- Donate End -->
 
-
+    </br></br></br></br>
         <!-- Fact Start -->
-        @include('home.fact')
+        @include('home.tim')
         <!-- Fact End -->
 
 
-        <!-- Testimonial Start -->
-        @include('home.testi')
-        <!-- Testimonial End -->
-
-
         <!-- Footer Start -->
-        @include('./master.footer')
+        @include('master.footer')
         <!-- Footer End -->
 
 
