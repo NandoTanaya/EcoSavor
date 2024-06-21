@@ -29,7 +29,7 @@
                             <!-- @include('buy.featured') -->
 
                             <!-- Optional untuk banner -->
-                            <!-- @include('buy.banner') -->
+                             @include('buy.banner')
 
                         </div>
                     </div>

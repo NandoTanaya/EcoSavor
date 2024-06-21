@@ -16,6 +16,9 @@ use App\Http\Controllers\AdminController;
 /** Untuk BuyController */
 use App\Http\Controllers\BuyController;
 
+/** Partner */
+use App\Http\Controllers\PartnerController;
+
 /**
  * Ubah route ke home (habis ditambah template HTML)
  */
@@ -80,3 +83,9 @@ route::get('shop_search', [BuyController::class, 'shop_search']);
 /**
  * logout
  */
+
+
+/**
+ * Partner
+ */
+route::get('/partner', [PartnerController::class, 'partner'])->name('/partner');

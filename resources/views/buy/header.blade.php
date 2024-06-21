@@ -1,6 +1,6 @@
 <!-- Single Page Header Start -->
 <div class="container-fluid page-header py-5">
-    <h1 class="text-center text-white display-6">Buy</h1>
+    <h1 class="text-center text-white display-6">Beli</h1>
 
     <!-- Temporary
     <ol class="breadcrumb justify-content-center mb-0">

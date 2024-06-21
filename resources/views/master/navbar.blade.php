@@ -1,14 +1,14 @@
 <style>
     :root {
-      --primary: #664c25;
-      --bg: #efe5d8;
-      --bgc: #DEC493;
-      }
+        --primary: #664c25;
+        --bg: #efe5d8;
+        --bgc: #DEC493;
+    }
 
-      .active
-      {
+    .active
+    {
         font-weight: bold!important;
-      }
+    }
 </style>
 
 <!-- Spinner Start -->
@@ -36,7 +36,7 @@
 
         <!-- Ubah navbar -->
         <nav class="navbar navbar-light bg-white navbar-expand-xl">
-            <a href="{{url('/')}}" class="navbar-brand"><h1 class="text-primary display-6" style="color: var(--primary)!important">Ecosavor</h1></a>
+            <a href="{{url('/')}}" class="navbar-brand"><h1 class="text-primary display-6" style="color: var(--primary)!important">EcoSavor</h1></a>
             <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars text-primary"></span>
             </button>
@@ -45,25 +45,25 @@
                 <div class="navbar-nav mx-auto">
                     <a href="{{url('/')}}" class="nav-item nav-link {{set_active('/')}}">Beranda</a>
                     <a href="{{url('/buy')}}" class="nav-item nav-link {{set_active('/buy')}}">Beli</a>
-                    <a href="shop-detail.html" class="nav-item nav-link" >Partner</a>
+                    <a href="{{url('/partner')}}" class="nav-item nav-link {{set_active('/partner')}}" >Partner</a>
                     <a href="contact.html" class="nav-item nav-link" >Donasi</a>
                 </div>
-            
+
                 @if (Route::has('login'))
                 <div class="d-flex m-3 me-0">
                     <a href="#" class="position-relative me-4 my-auto">
                         <i class="fa fa-shopping-bag fa-2x"></i>
                         <span class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-dark px-1" style="top: -5px; left: 15px; height: 20px; min-width: 20px;">3</span>
                     </a>
-                    
+
                     @auth
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link " data-bs-toggle="dropdown" style="color: var(--primary)!important">
-                            
+
                             <div i class="bi bi-chevron-down">
                                 {{ Auth::user()->name }}
                             </div>
-                            
+
                             <div class="dropdown-menu m-0 bg-white rounded-0" >
                                 <a href="{{route('profile.edit')}}" class="dropdown-item">Profile</a>
                                 <form method="POST" action="{{ route('logout') }}">
@@ -80,7 +80,7 @@
                         <i class="bi bi-box-arrow-in-left fa-2x"></i>
                     </a>
                     @endauth
-                    
+
                 </div>
                 @endif
             </div>
