@@ -1,6 +1,35 @@
+<style>
+    :root {
+        --primary: #664c25;
+        --bg: #efe5d8;
+        --bgc: #DEC493;
+    }
+    
+    .active
+    {
+        font-weight: bold!important;
+    }
+
+    .btn-primary {
+        background-color: var(--primary);
+        color: white;
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 0.25rem;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .btn-primary:hover {
+        background-color: var(--bgc)!important;
+        
+    }
+</style>
+
 <section>
     <header>
-        <h2 class="text-lg font-medium text-gray-900">
+        <h2 class="text-lg font-medium text-black">
             {{ __('Update Password') }}
         </h2>
 
@@ -32,7 +61,7 @@
         </div>
 
         <div class="flex items-center gap-4">
-            <x-primary-button>{{ __('Save') }}</x-primary-button>
+            <button class="btn-primary text-white focus:outline-none">{{ __('Save') }}</button>
 
             @if (session('status') === 'password-updated')
                 <p
