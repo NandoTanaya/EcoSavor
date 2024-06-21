@@ -1,3 +1,32 @@
+<style>
+    :root {
+        --primary: #664c25;
+        --bg: #efe5d8;
+        --bgc: #DEC493;
+    }
+    
+    .active
+    {
+        font-weight: bold!important;
+    }
+
+    .btn-primary {
+        background-color: var(--primary);
+        color: white;
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 0.25rem;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .btn-primary:hover {
+        background-color: var(--bgc)!important;
+        
+    }
+</style>
+
 <x-guest-layout>
     <form method="POST" action="{{ route('register') }}">
         @csrf
@@ -47,13 +76,13 @@
         </div>
 
         <div class="flex items-center justify-end mt-4">
-            <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('login') }}">
+            <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none" href="{{ route('login') }}">
                 {{ __('Already registered?') }}
             </a>
 
-            <x-primary-button class="ms-4">
+            <button class="btn-primary ms-4 text-white focus:outline-none">
                 {{ __('Register') }}
-            </x-primary-button>
+            </button>
         </div>
     </form>
 </x-guest-layout>

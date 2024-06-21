@@ -1,3 +1,32 @@
+<style>
+    :root {
+        --primary: #664c25;
+        --bg: #efe5d8;
+        --bgc: #DEC493;
+    }
+    
+    .active
+    {
+        font-weight: bold!important;
+    }
+
+    .btn-primary {
+        background-color: var(--primary);
+        color: white;
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 0.25rem;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .btn-primary:hover {
+        background-color: var(--bgc)!important;
+        
+    }
+</style>
+
 <x-guest-layout>
     <div class="mb-4 text-sm text-gray-600">
         {{ __('Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.') }}
@@ -17,9 +46,9 @@
         </div>
 
         <div class="flex items-center justify-end mt-4">
-            <x-primary-button>
+            <button class="btn-primary text-white focus:outline-none">
                 {{ __('Email Password Reset Link') }}
-            </x-primary-button>
+            </button>
         </div>
     </form>
 </x-guest-layout>

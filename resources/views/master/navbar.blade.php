@@ -67,7 +67,7 @@
                             <div class="dropdown-menu m-0 bg-white rounded-0" >
                                 <a href="{{route('profile.edit')}}" class="dropdown-item">Profile</a>
                                 <form method="POST" action="{{ route('logout') }}">
-                                    @csrf
+                                    @csrf 
                                     <button type="submit" class="dropdown-item">Log Out</button>
                                 </form>
                                 {{-- <a href="{{route('logout')}}" class="dropdown-item">LogOut</a> --}}

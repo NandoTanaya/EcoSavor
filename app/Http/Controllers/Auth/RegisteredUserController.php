@@ -33,6 +33,7 @@ class RegisteredUserController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
+            'phone' => ['required', 'regex:/^(?:\+62|62|0)8[1-9][0-9]{6,10}$/'],
         ]);
 
         $user = User::create([
@@ -43,9 +44,7 @@ class RegisteredUserController extends Controller
         ]);
 
         event(new Registered($user));
-
-        Auth::login($user);
-
-        return redirect(route('dashboard', absolute: false));
+        
+        return redirect(route('login', absolute: false));
     }
 }

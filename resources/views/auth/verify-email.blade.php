@@ -1,3 +1,32 @@
+<style>
+    :root {
+        --primary: #664c25;
+        --bg: #efe5d8;
+        --bgc: #DEC493;
+    }
+    
+    .active
+    {
+        font-weight: bold!important;
+    }
+
+    .btn-primary {
+        background-color: var(--primary);
+        color: white;
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 0.25rem;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .btn-primary:hover {
+        background-color: var(--bgc)!important;
+        
+    }
+</style>
+
 <x-guest-layout>
     <div class="mb-4 text-sm text-gray-600">
         {{ __('Thanks for signing up! Before getting started, could you verify your email address by clicking on the link we just emailed to you? If you didn\'t receive the email, we will gladly send you another.') }}
@@ -14,9 +43,9 @@
             @csrf
 
             <div>
-                <x-primary-button>
+                <button class="btn-primary text-white focus:outline-none">
                     {{ __('Resend Verification Email') }}
-                </x-primary-button>
+                </button>
             </div>
         </form>
 
