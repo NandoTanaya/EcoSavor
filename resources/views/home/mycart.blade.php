@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    @include('home.css')
+    @include('home.mycartcss')
     <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
 
