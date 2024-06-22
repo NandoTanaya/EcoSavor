@@ -104,3 +104,10 @@ Route::get('/delete_cart/{id}', [HomeController::class, 'deleteCart'])->name('de
 Route::get('/donasi', function () {
     return view('home.donasi');
 })->middleware(['auth', 'verified'])->name('donasi');
+
+
+/** cart
+ *
+ */
+route::get('deleteCart/{id}', [HomeController::class, 'deleteCart'])->middleware(['auth', 'verified']);
+Route::post('/updateCartQuantity', [HomeController::class, 'updateQuantity']);

@@ -9,13 +9,19 @@ class Cart extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'user_id',
+        'product_id',
+        'quantity', // Pastikan quantity ada di fillable
+    ];
+
     public function user()
     {
-        return $this->hasOne('App\Models\User','id','user_id');
+        return $this->hasOne('App\Models\User', 'id', 'user_id');
     }
 
     public function product()
     {
-        return $this->hasOne('App\Models\Product','id','product_id');
+        return $this->hasOne('App\Models\Product', 'id', 'product_id');
     }
 }

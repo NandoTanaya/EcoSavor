@@ -47,17 +47,31 @@ class HomeController extends Controller
     // Fungsi add to cart
     public function add_cart($id)
     {
-        $product_id = $id;
         $user = Auth::user();
         $user_id = $user->id;
-        $data = new Cart;
-        $data->user_id = $user_id;
-        $data->product_id = $product_id;
 
-        $data -> save();
-        toastr()->timeOut(1000)->closeButton()->addSuccess('Product Added to the cart');
+        // Memeriksa apakah produk sudah ada di cart
+        $existingCartItem = Cart::where('user_id', $user_id)
+                                ->where('product_id', $id)
+                                ->first();
+
+        if ($existingCartItem) {
+            // Jika produk sudah ada di cart, tampilkan pesan dan jangan tambahkan lagi
+            toastr()->timeOut(10000)->closeButton()->addWarning('Product is already in the cart');
+        } else {
+            // Jika produk belum ada di cart, tambahkan produk ke cart
+            $data = new Cart;
+            $data->user_id = $user_id;
+            $data->product_id = $id;
+            $data->quantity = 1; // Default quantity atau Anda bisa menyesuaikan sesuai kebutuhan
+
+            $data->save();
+            toastr()->timeOut(10000)->closeButton()->addSuccess('Product Added to the cart');
+        }
+
         return redirect()->back();
     }
+
 
     public function mycart()
     {
@@ -70,14 +84,30 @@ class HomeController extends Controller
         }
         return view('home.mycart', compact('count', 'cart'));
     }
+
     // Remove cart
     public function deleteCart($id)
     {
         $cartItem = Cart::find($id);
+        $cartItem->delete();
+        toastr()->timeOut(10000)->closeButton()->addSuccess('
+        Cart Deleted Successfully');
+        return redirect()->back();
+    }
+
+    public function updateQuantity(Request $request)
+    {
+        $cartItem = Cart::find($request->cartItemId);
+
         if ($cartItem) {
-            $cartItem->delete();
+            $cartItem->quantity = $request->quantity;
+            $cartItem->save();
+
+            return response()->json(['success' => true, 'message' => 'Cart updated successfully']);
         }
 
-        return redirect()->back()->with('message', 'Product removed from cart');
+        return response()->json(['success' => false, 'message' => 'Cart item not found']);
     }
+
 }
+
