@@ -2,7 +2,7 @@
 <html lang="en">
 
     <head>
-        @include('home.css')
+        @include('partner.css')
     </head>
 
     <body>
