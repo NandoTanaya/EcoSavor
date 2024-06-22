@@ -111,3 +111,12 @@ Route::get('/donasi', function () {
  */
 route::get('deleteCart/{id}', [HomeController::class, 'deleteCart'])->middleware(['auth', 'verified']);
 Route::post('/updateCartQuantity', [HomeController::class, 'updateQuantity']);
+
+// Route definition
+route::post('/clearCartItem', [HomeController::class, 'clearCartItem']);
+
+Route::post('/clearCartItems', 'CartController@clearCartItems')->name('clear.cart.items');
+
+use App\Http\Controllers\CartController;
+
+Route::post('/clearCart', [CartController::class, 'clearCart'])->name('clearCart');

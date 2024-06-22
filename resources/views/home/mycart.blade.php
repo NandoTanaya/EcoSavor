@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    @include('home.mycartcss')
+    @include('home.css')
     <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
 
@@ -94,24 +94,18 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="qrisModalLabel">
-                        Selesaikan Donasi Anda
-                    </h5>
+                    <h5 class="modal-title" id="qrisModalLabel">Selesaikan Pembayaran Anda</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body text-center">
-                    <p>Scan QR code dibawah untuk menyelesaikan transaksi:</p>
+                    <p>Scan QR code di bawah untuk menyelesaikan transaksi:</p>
                     <img src="qris-example.png" alt="QRIS Code" class="img-fluid" />
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">
-                        Urungkan
-                    </button>
-                    <button type="button" class="btn btn-success" id="confirmPaymentModal">
-                        Pembayaran Berhasil
-                    </button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Urungkan</button>
+                    <button type="button" class="btn btn-success" id="confirmPaymentModal">Pembayaran Berhasil</button>
                 </div>
             </div>
         </div>
@@ -127,6 +121,40 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            // Handle "Bayar" button click
+            document.getElementById('confirmPayment').addEventListener('click', function() {
+                $('#qrisModal').modal('show');
+            });
+
+            // Handle "Pembayaran Berhasil" button click in modal
+            document.getElementById('confirmPaymentModal').addEventListener('click', function() {
+                // Make an AJAX request to delete all cart items
+                $.ajax({
+                    url: '/clearCart',
+                    type: 'POST',
+                    data: {
+                        _token: '{{ csrf_token() }}'
+                    },
+                    success: function(response) {
+                        if (response.success) {
+                            $('#qrisModal').modal('hide');
+
+                            // Show success notification
+                            alert('Pembayaran berhasil!');
+
+                            // Clear the cart table
+                            document.querySelector('tbody').innerHTML = '';
+                            document.getElementById('grand-total').innerText = '0.00';
+                        } else {
+                            console.error(response.message);
+                        }
+                    },
+                    error: function(error) {
+                        console.error('Error:', error);
+                    }
+                });
+            });
+
             document.querySelector('tbody').addEventListener('click', function(event) {
                 if (event.target.closest('.btn-plus')) {
                     incrementQuantity(event.target.closest('.btn-plus'));
@@ -134,9 +162,8 @@
                     decrementQuantity(event.target.closest('.btn-minus'));
                 }
             });
-        });
 
-        function incrementQuantity(button) {
+            function incrementQuantity(button) {
             let input = button.closest('.quantity').querySelector('.quantity-input');
             let currentValue = parseInt(input.value);
             let maxQuantity = parseInt(input.getAttribute('data-max-quantity'));
@@ -163,47 +190,48 @@
             }
         }
 
-        function updateTotalPrice() {
-            let rows = document.querySelectorAll('tbody tr');
-            let grandTotal = 0;
+            function updateTotalPrice() {
+                let rows = document.querySelectorAll('tbody tr');
+                let grandTotal = 0;
 
-            rows.forEach(row => {
-                let quantity = parseInt(row.querySelector('.quantity-input').value);
-                let finalPrice = parseFloat(row.querySelector('.final-price').getAttribute('data-price'));
-                let totalPrice = quantity * finalPrice;
+                rows.forEach(row => {
+                    let quantity = parseInt(row.querySelector('.quantity-input').value);
+                    let finalPrice = parseFloat(row.querySelector('.final-price').getAttribute('data-price'));
+                    let totalPrice = quantity * finalPrice;
 
-                row.querySelector('.total-price').innerText = totalPrice.toFixed(2);
-                grandTotal += totalPrice;
-            });
+                    row.querySelector('.total-price').innerText = totalPrice.toFixed(2);
+                    grandTotal += totalPrice;
+                });
 
-            document.getElementById('grand-total').innerText = grandTotal.toFixed(2);
-        }
+                document.getElementById('grand-total').innerText = grandTotal.toFixed(2);
+            }
 
-        function updateCartQuantity(cartItemId, quantity) {
-            $.ajax({
-                url: '/updateCartQuantity',
-                type: 'POST',
-                data: {
-                    cartItemId: cartItemId,
-                    quantity: quantity,
-                    _token: '{{ csrf_token() }}'
-                },
-                success: function(response) {
-                    if (response.success) {
-                        console.log(response.message);
-                        updateTotalPrice();
-                    } else {
-                        console.error(response.message);
+            function updateCartQuantity(cartItemId, quantity) {
+                $.ajax({
+                    url: '/updateCartQuantity',
+                    type: 'POST',
+                    data: {
+                        cartItemId: cartItemId,
+                        quantity: quantity,
+                        _token: '{{ csrf_token() }}'
+                    },
+                    success: function(response) {
+                        if (response.success) {
+                            console.log(response.message);
+                            updateTotalPrice();
+                        } else {
+                            console.error(response.message);
+                        }
+                    },
+                    error: function(error) {
+                        console.error('Error:', error);
                     }
-                },
-                error: function(error) {
-                    console.error('Error:', error);
-                }
-            });
-        }
+                });
+            }
 
-        // Initial calculation
-        updateTotalPrice();
+            // Initial calculation
+            updateTotalPrice();
+        });
     </script>
 </body>
 
