@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0972b5c2ba9b344165590a4b58a8793a",
+    "content-hash": "17b794035ec1b9339261940353ed36c5",
     "packages": [
         {
             "name": "blade-ui-kit/blade-heroicons",
@@ -7074,16 +7074,16 @@
         },
         {
             "name": "laravel/breeze",
-            "version": "v2.1.0",
+            "version": "v2.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/breeze.git",
-                "reference": "438424c11583576bbf3897dda505d2565e53c9bd"
+                "reference": "d3484d08aaaa84896bdd2d1787e7da0fc03f676f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/breeze/zipball/438424c11583576bbf3897dda505d2565e53c9bd",
-                "reference": "438424c11583576bbf3897dda505d2565e53c9bd",
+                "url": "https://api.github.com/repos/laravel/breeze/zipball/d3484d08aaaa84896bdd2d1787e7da0fc03f676f",
+                "reference": "d3484d08aaaa84896bdd2d1787e7da0fc03f676f",
                 "shasum": ""
             },
             "require": {
@@ -7130,7 +7130,7 @@
                 "issues": "https://github.com/laravel/breeze/issues",
                 "source": "https://github.com/laravel/breeze"
             },
-            "time": "2024-06-06T14:18:45+00:00"
+            "time": "2024-10-29T15:11:57+00:00"
         },
         {
             "name": "laravel/pint",

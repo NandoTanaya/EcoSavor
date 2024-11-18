@@ -76,7 +76,7 @@ route::get('product_search', [AdminController::class, 'product_search'])->middle
 /**
  * Buy
  */
-route::get('/buy', [BuyController::class, 'buy'])->middleware(['auth', 'verified'])->name('/buy');
+route::get('/buy', [BuyController::class, 'buy'])->name('/buy');
 route::get('category_search', [BuyController::class, 'category_search']);
 route::get('shop_search', [BuyController::class, 'shop_search']);
 

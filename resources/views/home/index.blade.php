@@ -33,7 +33,7 @@
 
     </br></br></br></br>
         <!-- Fact Start -->
-        @include('home.tim')
+        {{-- @include('home.tim') --}}
         <!-- Fact End -->
 
 

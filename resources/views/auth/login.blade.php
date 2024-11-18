@@ -25,7 +25,9 @@
         background-color: var(--bgc)!important;
         
     }
-</style>
+</style>    
+
+<title>Login</title>
 
 <x-guest-layout >
     <!-- Session Status -->
