@@ -22,8 +22,9 @@
 
 
 <!-- Customized Bootstrap Stylesheet -->
-<link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+<link href="https://ecosavor-software-engineering-production.up.railway.app/css/style.css" rel="stylesheet">
 
 <!-- Template Stylesheet -->
-<link href="{{ asset('css/style.css') }}" rel="stylesheet">
+<link href="https://ecosavor-software-engineering-production.up.railway.app/css/style.css" rel="stylesheet">
+
 
