@@ -22,10 +22,10 @@
 
 
 <!-- Customized Bootstrap Stylesheet -->
-<link href="https://ecosavor-software-engineering-production.up.railway.app/css/style.css" rel="stylesheet">
+<link href="css/bootstrap.min.css" rel="stylesheet">
 
 <!-- Template Stylesheet -->
-<link href="https://ecosavor-software-engineering-production.up.railway.app/css/style.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
 
 
 <!-- Fredoka -->
